@@ -740,33 +740,33 @@
 /* Responsivo Geral */
 
 @media (max-width: 1024px) {
-    .container header {
+    .container .hero header {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .container header nav {
+    .container .hero header nav {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .container .main-section {
+    .container .hero .main-section {
         flex-direction: column;
         text-align: center;
         padding: 2rem;
     }
 
-    .container .main-section .text-content {
+    .container .hero .main-section .text-content {
         width: 90%;
         align-items: center;
     }
 
-    .container .main-section .img-content {
+    .container .hero .main-section .img-content {
         width: 80%;
         margin-top: 1rem;
     }
 
-    .container .main-section .text-content p {
+    .container .hero .main-section .text-content p {
         text-align: center;
     }
 
@@ -830,12 +830,12 @@
 }
 
 @media (max-width: 768px) {
-    .container header {
+    .container .hero header {
         justify-content: space-between;
         padding: 1rem;
     }
 
-    .container header nav {
+    .container .hero header nav {
         position: absolute;
         top: 150px;
         right: 0;
@@ -848,11 +848,11 @@
         transition: height 0.3s ease;
     }
 
-    .container header nav.active {
+    .container .hero header nav.active {
         height: 300px; /* Altura quando aberto */
     }
 
-    .container header nav a {
+    .container .hero header nav a {
         margin: 1rem 0;
     }
 
@@ -864,20 +864,20 @@
         display: flex;
     }
 
-    .container .main-section .text-content h1 {
+    .container .hero .main-section .text-content h1 {
         font-size: 2rem;
     }
 
-    .container .main-section .text-content h2 {
+    .container .hero .main-section .text-content h2 {
         font-size: 1.3rem;
     }
 
-    .container .main-section .text-content p {
+    .container .hero .main-section .text-content p {
         font-size: 1rem;
     }
 
-    .container .main-section .text-content,
-    .container .main-section .img-content {
+    .container .hero .main-section .text-content,
+    .container .hero .main-section .img-content {
         width: 100%;
     }
 
@@ -954,29 +954,29 @@
 }
 
 @media (max-width: 480px) {
-    .container header img {
+    .container .hero header img {
         width: 150px;
     }
 
-    .container header nav {
+    .container .hero header nav {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
     }
 
-    .container .main-section {
+    .container .hero .main-section {
         padding: 1rem;
     }
 
-    .container .main-section .text-content h1 {
+    .container .hero .main-section .text-content h1 {
         font-size: 1.6rem;
     }
 
-    .container .main-section .text-content h2 {
+    .container .hero .main-section .text-content h2 {
         font-size: 1.1rem;
     }
 
-    .container .main-section .text-content p {
+    .container .hero .main-section .text-content p {
         font-size: 0.8rem;
     }
 
