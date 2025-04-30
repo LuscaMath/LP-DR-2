@@ -838,7 +838,7 @@
 
     .container .hero header nav {
         position: absolute;
-        top: 150px;
+        top: 180px;
         right: 0;
         background-color: var(--secondary-color);
         flex-direction: column;
