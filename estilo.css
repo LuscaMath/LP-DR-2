@@ -896,8 +896,6 @@ p {
     justify-content: space-around;
 }
 
-.footer-about {}
-
 .footer-about .logo {
     width: 250px;
 }
@@ -1247,6 +1245,11 @@ p {
     }
 
     .container .contato .btn-content .main-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .container .convenios .main-button {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
     }
