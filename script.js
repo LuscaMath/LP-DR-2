@@ -41,3 +41,14 @@ nextButton.addEventListener('click', () => {
 
 // Garante que o carrossel esteja na posição inicial
 window.addEventListener('load', updateCarousel);
+
+
+function showPopup() {
+    document.getElementById('popupOverlay').style.display = 'flex';
+    body.style.overflowY = 'hidden'
+}
+
+function hidePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+    body.style.overflowY = 'auto'
+}

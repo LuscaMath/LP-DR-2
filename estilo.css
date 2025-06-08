@@ -103,6 +103,7 @@
 .container .hero header nav a:hover {
     color: #6495ed;
 }
+
 .container .hero header .header-button {
     display: flex;
     align-items: center;
@@ -138,7 +139,8 @@
     height: 30px;
     gap: 5px;
     position: relative;
-    z-index: 1000; /* Garante que fique acima do menu */
+    z-index: 1000;
+    /* Garante que fique acima do menu */
 }
 
 .menu-toggle span {
@@ -256,7 +258,8 @@
     margin-top: 2rem;
 }
 
-.container .especialidades h1, p {
+.container .especialidades h1,
+p {
     text-align: center;
 }
 
@@ -369,20 +372,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
     z-index: 1;
     transition: background 0.3s ease;
 }
 
 .container .especialidades .especialidades-items .especialidade-item:hover::before {
-    background: rgba(0, 0, 0, 0.9); /* Darker overlay on hover */
+    background: rgba(0, 0, 0, 0.9);
+    /* Darker overlay on hover */
 }
 
 .container .especialidades .especialidades-items .especialidade-item h2,
 .container .especialidades .especialidades-items .especialidade-item p {
     position: relative;
     z-index: 2;
-    color: #ffffff; /* Ensure text is readable */
+    color: #ffffff;
+    /* Ensure text is readable */
     text-align: center;
 }
 
@@ -457,7 +463,8 @@
     height: 20px;
 }
 
-.container .sobre .sobre-content .sobre-text h1, p {
+.container .sobre .sobre-content .sobre-text h1,
+p {
     text-align: left;
 }
 
@@ -650,6 +657,156 @@
     }
 }
 
+/* Modal for Convenios */
+
+.container .convenios {
+    background: linear-gradient(180deg, #000000, #154488);
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.container .convenios h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container .convenios p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container .convenios .main-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    gap: 0.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: -1rem;
+}
+
+.container .convenios .main-button:hover {
+    background-color: var(--text-color);
+    color: #333333;
+    box-shadow: var(--hover-shadow);
+    transform: scale(1.05);
+}
+
+.container .convenios .main-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/*PopUp*/
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: var(--text-color);
+    padding: 20px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+.popup h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--sub-title-color);
+}
+
+.popup ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.popup ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    color: var(--p-d-color);
+}
+
+.close-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.close-btn:focus {
+    outline: none;
+}
+
+/* Responsividade */    
+@media (max-width: 600px) {
+    .popup {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-popup {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .popup h2 {
+        font-size: 20px;
+    }
+
+    .popup ul li {
+        font-size: 16px;
+    }
+
+    .close-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
 /* Contato Section */
 .container .contato {
     font-family: "Poppins", sans-serif;
@@ -660,12 +817,14 @@
     background-color: var(--primary-color);
     width: 100%;
     height: fit-content;
-    flex-wrap: wrap; /* Added for responsiveness */
+    flex-wrap: wrap;
+    /* Added for responsiveness */
 }
 
 .container .contato .titles-content {
     width: 40%;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
+    /* Center text for smaller screens */
 }
 
 .container .contato .titles-content h2 {
@@ -737,8 +896,7 @@
     justify-content: space-around;
 }
 
-.footer-about {
-}
+.footer-about {}
 
 .footer-about .logo {
     width: 250px;
@@ -797,6 +955,16 @@
 }
 
 /* Responsivo Geral */
+@media (max-width: 1500px) {
+    .container .especialidades .especialidades-items .especialidade-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .container .especialidades .especialidades-items .especialidade-item p {
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .container .hero header {
@@ -892,6 +1060,7 @@
     .wpp-fixed img {
         width: 45px;
     }
+
     .container .hero header {
         justify-content: space-between;
         padding: 1rem;
@@ -911,7 +1080,8 @@
     }
 
     .container .hero header nav.active {
-        height: 300px; /* Altura quando aberto */
+        height: 300px;
+        /* Altura quando aberto */
     }
 
     .container .hero header nav a {
@@ -964,7 +1134,8 @@
         font-size: 0.8rem;
     }
 
-    .container .sobre .sobre-content .sobre-text h1, p {
+    .container .sobre .sobre-content .sobre-text h1,
+    p {
         text-align: center;
         font-size: 2rem;
     }
@@ -1124,5 +1295,3 @@
         width: 100%;
     }
 }
-
-
